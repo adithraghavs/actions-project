@@ -20,6 +20,6 @@ jobs:
       - name: Stage changed files
         run: git add .
       - name: Commit changed files
-        run: git commit -m "auto updating history.json"
+        run: git commit -m "auto updating history.json and maybe checked for changes in data"
       - name: Push to main
         run: git push
