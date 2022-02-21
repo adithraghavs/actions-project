@@ -10,3 +10,5 @@ history_json = json.dumps(history_dict, indent=4)
 
 history = open("history.json", "w")
 history.write(history_json)
+
+print(history_json)
