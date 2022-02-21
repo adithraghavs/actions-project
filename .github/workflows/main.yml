@@ -4,7 +4,8 @@ jobs:
   Test-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Append to history.json
+      - name: Adding actions/checkout@v2
         uses: actions/checkout@v2
+      - name: Append XML to history.json
         run: |
           python3 ${{ github.workspace }}/append_to_history.py
