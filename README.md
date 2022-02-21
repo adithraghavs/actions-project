@@ -11,4 +11,4 @@ When a push to the repo happens, it is possible that the `data.xml` file has bee
 # Usage
 Clone the repository (`git clone https://github.com/adithraghavs/actions-project.git`), open the folder in your favourite text editor, change the XML file, stage, commit, and push.
 
-You can also just change the XML file and then run `python3 /path/to/actions-project/.github/workflows/app.py` to see it happen on your local.
+You can also just change the XML file and then run `python3 .github/workflows/app.py` to see it happen on your local.
