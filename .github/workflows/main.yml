@@ -4,8 +4,7 @@ jobs:
   Test-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
+      - name: Append to history.json
         uses: actions/checkout@v2
-      - name: List files in the repository
         run: |
-          python3 ${{ github.workspace }}/test.py
+          python3 ${{ github.workspace }}/append_to_history.py
