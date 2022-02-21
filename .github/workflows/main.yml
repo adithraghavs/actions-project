@@ -1,0 +1,11 @@
+name: GitHub Actions Test
+on: [push]
+jobs:
+  Test-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: List files in the repository
+        run: |
+          python3 ${{ github.workspace }}/test.py
