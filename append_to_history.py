@@ -8,7 +8,8 @@ hash = subprocess.check_output(["git", "rev-parse", "HEAD"]).decode()[:-2]
 history_dict[hash] = data
 history_json = json.dumps(history_dict, indent=4)
 
-history = open("history.json", "w")
+history = open("history.json", "w+")
 history.write(history_json)
 
-print(history_json)
+history = open("history.json", "r")
+print(history.read())
