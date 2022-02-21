@@ -8,4 +8,12 @@ jobs:
         uses: actions/checkout@v2
       - name: Append XML to history.json
         run: |
-          python3 ${{ github.workspace }}/append_to_history.py
+          python3 ${{ github.workspace }}/.github/workflows/append_to_history.py
+      - name: Check for changes
+        run: git status
+      - name: Stage changed files
+        run: git add .
+      - name: Commit changed files
+        run: git commit -m "auto updating history.json"
+      - name: Push to main
+        run: git push
