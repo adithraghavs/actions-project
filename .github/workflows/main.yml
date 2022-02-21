@@ -9,12 +9,20 @@ jobs:
       - name: Append XML to history.json
         run: |
           python3 ${{ github.workspace }}/.github/workflows/append_to_history.py
-      - name: Check for changes in data.xml
-        run: python3 ${{ github.workspace }}/.github/workflows/check_changes_in_data.py
       - name: Setup git - step 1
         run: git config --global user.email "adithraghavs@gmail.com"
       - name: Setup git - step 2
         run: git config --global user.name "Adith Raghav"
+      - name: Check for changes
+        run: git status
+      - name: Stage changed files
+        run: git add .
+      - name: Commit changed files
+        run: git commit -m "auto updating history.json and maybe checked for changes in data"
+      - name: Push to main
+        run: git push
+      - name: Check for changes in data.xml
+        run: python3 ${{ github.workspace }}/.github/workflows/check_changes_in_data.py
       - name: Check for changes
         run: git status
       - name: Stage changed files
