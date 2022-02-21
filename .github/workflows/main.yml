@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: Adding actions/checkout@v2
         uses: actions/checkout@v2
+      - name: Test
+        run: git diff 44ac89bd2e1dc2b90bfd8506e825b099eb87e0e4 4c5952b60b8a5911154534ea1fefec3567c49c52 ${{ github.workspace }}/data.xml
       - name: Run Python
         run: |
           python3 ${{ github.workspace }}/.github/workflows/app.py
