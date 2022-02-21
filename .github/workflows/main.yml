@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: Adding actions/checkout@v2
         uses: actions/checkout@v2
-      - name: Append XML to history.json
+      - name: Run Python
         run: |
           python3 ${{ github.workspace }}/.github/workflows/app.py
       - name: Setup git - step 1
