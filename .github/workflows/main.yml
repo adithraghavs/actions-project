@@ -21,5 +21,7 @@ jobs:
         run: git add .
       - name: Commit changed files
         run: git commit -m "auto updating history.json and maybe checked for changes in data"
+      - name: fetch from main 
+        run: git fetch origin main
       - name: Push to main
-        run: git push
+        run: git push origin HEAD:main
