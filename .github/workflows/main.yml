@@ -9,6 +9,9 @@ jobs:
       - name: Append XML to history.json
         run: |
           python3 ${{ github.workspace }}/.github/workflows/append_to_history.py
+      - name: Setup git
+        run: git config --global user.email "adithraghavs@gmail.com"
+        run: git config --global user.name "Adith Raghav"
       - name: Check for changes
         run: git status
       - name: Stage changed files
